@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 
 def uppercase(str):
-    if not str:
-        print("\n")
-
     strlen = len(str)
     i = 0
 
