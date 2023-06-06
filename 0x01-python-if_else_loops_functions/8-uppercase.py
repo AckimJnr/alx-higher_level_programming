@@ -2,7 +2,7 @@
 
 def uppercase(str):
     if not str:
-        return ""
+        print("\n")
 
     strlen = len(str)
     i = 0
