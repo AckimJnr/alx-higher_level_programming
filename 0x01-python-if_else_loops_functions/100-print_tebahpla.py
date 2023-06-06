@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 i, j = 122, 1
-while (i > 98):
+while (i > 96):
     if j % 2 == 0:
         char = i - 32
     else:
