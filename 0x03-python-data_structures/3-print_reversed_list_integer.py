@@ -2,7 +2,7 @@
 
 def print_reversed_list_integer(my_list=[]):
     if not my_list:
-        print()
+        print("".format(), end='')
     list_copy = my_list.copy()
     list_copy.reverse()
 
