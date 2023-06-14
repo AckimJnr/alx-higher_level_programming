@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-import string
-print(*string.ascii_uppercase, sep='')
+import builtins
+print(*getattr(builtins, '__import__')('string').ascii_uppercase, sep='', end='\n')
