@@ -2,4 +2,11 @@
 
 
 class Rectangle:
+    """Rectangle representantion
+
+    Attributes:
+        None
+    Methods:
+        None
+    """
     pass
