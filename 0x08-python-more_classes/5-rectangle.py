@@ -32,6 +32,7 @@ class Rectangle:
     def __del__(self):
         """ class destructor """
         print("Bye rectangle...")
+
     @property
     def width(self):
         """ Retrieves the width of the rectangle"""
