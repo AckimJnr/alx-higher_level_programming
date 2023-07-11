@@ -1,12 +1,24 @@
 #!/usr/bin/python3
-import importlib.util as ut
-spec = ut.spec_from_file_location("base_geometry", "7-base_geometry.py")
-base_geometry = ut.module_from_spec(spec)
-spec.loader.exec_module(base_geometry)
 """Rectangle module inheriting from BaseGeometry"""
 
 
-class Rectangle(base_geometry.BaseGeometry):
+class BaseGeometry:
+    """Contains operations to work on geometry"""
+
+    def area(self):
+        """Area Calculation"""
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """Validates value"""
+
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
+
+
+class Rectangle(BaseGeometry):
     """Defines a rectangle"""
     def __init__(self, width, height):
         """Constructor"""
