@@ -1,0 +1,35 @@
+Geometry Module Test Document
+
+Description:
+This document provides a test script to validate the functionality of the "Geometry" module extension.
+
+Test Script:
+
+#!/usr/bin/python3
+
+from 7-base_geometry import BaseGeometry
+
+geometry = BaseGeometry()
+
+# Test the area() method
+try:
+    geometry.area()
+except Exception as e:
+    print("Exception occurred:", str(e))
+
+# Test the integer_validator() method
+try:
+    geometry.integer_validator("side_length", 5)
+except Exception as e:
+    print("Exception occurred:", str(e))
+
+try:
+    geometry.integer_validator("side_length", -10)
+except Exception as e:
+    print("Exception occurred:", str(e))
+
+try:
+    geometry.integer_validator("side_length", "abc")
+except Exception as e:
+    print("Exception occurred:", str(e))
+
