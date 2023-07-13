@@ -6,6 +6,7 @@ from load_from_json_file import load_from_json_file
 
 
 if "__name__"=="__main__":
+    """Run only if its the main file"""
     try:
         old_data = load_from_json_file('add_item.json')
     except FileNotFoundError:
