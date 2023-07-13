@@ -11,5 +11,5 @@ def append_after(filename="", search_string="", new_string=""):
         for line in lines:
             doc.write(line)
             if search_string in line:
-                doc.write(new_string + "\n")
+                doc.write(new_string)
         doc.truncate()
