@@ -86,3 +86,34 @@ class Rectangle(Base):
                 f"[Rectangle] ({self.id}) "
                 f"{self.x}/{self.y} - {self.width}/{self.height}"
             )
+
+    def display(self):
+        """
+        Draw the rectangle to stdout, with respect to x and y positions
+        """
+
+        for _ in range(self.y):
+            print()
+
+        for _ in range(self.height):
+            print(" " * self.x + "#" * self.width)
+
+    def update(self, *args, **kwargs):
+        """
+        Assign arguments to each attrib
+        """
+        if args:
+            argc = len(args)
+            if argc >= 1:
+                self.id = args[0]
+            if argc >= 2:
+                self.width = args[1]
+            if argc >= 3:
+                self.height = args[2]
+            if argc >= 4:
+                self.x = args[3]
+            if argc >= 5:
+                self.y = args[4]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
