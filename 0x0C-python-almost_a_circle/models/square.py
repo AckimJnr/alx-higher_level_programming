@@ -27,3 +27,25 @@ class Square(Rectangle):
 
     def __str__(self):
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+
+    def update(self, *args, **kwargs):
+        """
+        Get variable number arguments, and key pair sets
+        """
+        if args and len(args) > 0:
+            attrs = ["id", "size", "x", "y"]
+            for i, arg in enumerate(args):
+                if i < len(attrs):
+                    setattr(self, attrs[i], arg)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        returns dictionary rep of the square
+        """
+        return {
+            'id': self.id, 'x': self.x,
+            'size': self.size, 'y': self.y
+        }
