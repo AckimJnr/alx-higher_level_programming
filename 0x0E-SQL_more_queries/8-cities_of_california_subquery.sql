@@ -1,7 +1,7 @@
 -- select from cities
 
-SELECT id, name FROM cities
-WHERE id =(
-    SELECT id FROM states
+SELECT `id`, `name` FROM `cities`
+WHERE `state_id` =(
+    SELECT `id` FROM `states`
     WHERE name = 'California'
 );
