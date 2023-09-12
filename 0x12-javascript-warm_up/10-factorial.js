@@ -2,7 +2,7 @@
 
 const inputA = process.argv[2];
 
-const a = parseInt(inputA);
+const a = isNaN(parseInt(inputA)) ? 1 : parseInt(inputA);
 
 const factResult = factorial(a);
 
