@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
         cur = conn.cursor()
         cur.execute("SELECT * FROM states\
-                    WHERE name LIKE %s\
+                    WHERE BINARY name LIKE %s\
                     ORDER BY id ASC", (searchItem,))
 
         query_rows = cur.fetchall()
