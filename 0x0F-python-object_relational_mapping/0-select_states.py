@@ -1,15 +1,18 @@
 #!/usr/bin/python3
-
-import MySQLdb
-import sys
-""" Select all the states from the database
+"""
+Select all the states from the database
     Args:
         argv[1](string): Db username
         argv[2](string): Db password
 """
+import MySQLdb
+import sys
 
 
 if __name__ == '__main__':
+    """
+    This block makes it execute only as the main module
+    """
     dbhost = "localhost"
     username = sys.argv[1]
     password = sys.argv[2]
