@@ -16,7 +16,7 @@ if __name__ == '__main__':
     dbhost = "localhost"
     username = sys.argv[1]
     password = sys.argv[2]
-    dbname = "hbtn_0e_0_usa"
+    dbname = sys.argv[3]
 
     conn = MySQLdb.connect(
             host=dbhost,
