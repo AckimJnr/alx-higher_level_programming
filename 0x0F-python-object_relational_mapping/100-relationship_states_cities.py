@@ -28,7 +28,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    california_state = session.query(State).filter_by(name='California').first()
+    california_state = session.query(State).filter_by(
+            name='California').first()
 
     if california_state is None:
         california_state = State(name='California')
