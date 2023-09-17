@@ -26,12 +26,11 @@ if __name__ == "__main__":
     session = Session()
 
     query = session.query(State).filter(
-            State.name.like(f'%' + searchKey + '%')).order_by(State.id)
+            State.name.like(f'%' + searchKey + '%')).first()
 
-    if len(query.all()) == 0:
+    if query is None:
         print("Not found")
     else:
-        for state in query:
-            print("{}".format(state.id))
+        print("{}".format(query.id))
 
     session.close()
