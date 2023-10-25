@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Size validation module"""
 
 
 class Square:
